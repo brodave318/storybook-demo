@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Todo from "./Todo";
 import TodoContainer from "./TodoContainer";
 import db from "./firebase";
 
@@ -16,14 +17,24 @@ function App() {
   const addTodo = (e) => {
     e.preventDefault();
 
+    if (input === "") return;
+
     setTodos([...todos, input]);
-    console.log(input);
     setInput("");
+  };
+
+  const deleteTodo = (e) => {
+    e.preventDefault();
+    console.log("e");
+    let index = e.target.value;
+
+    todos.splice(index, 1);
+    setTodos([...todos]);
   };
 
   return (
     <div>
-      <h1>Hello World!</h1>
+      <h1 class="heading">Todos</h1>
 
       <form>
         <input
@@ -36,7 +47,9 @@ function App() {
         </button>
       </form>
 
-      <TodoContainer todos={todos} />
+      <div className="todosPile">
+        <TodoContainer todos={todos} deleteTodo={deleteTodo} />
+      </div>
     </div>
   );
 }

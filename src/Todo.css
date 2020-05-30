@@ -1,15 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mountains+of+Christmas:wght@700&display=swap");
+
 .todo {
-  width: 100%;
+  width: 300px;
+  font-family: "Mountains of Christmas", cursive;
+  letter-spacing: 2.5px;
+  background-color: rgba(255, 208, 0, 0.876);
+  border: 3px solid rgb(255, 138, 5);
+  display: flex;
+  justify-content: space-between;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 1px #f9df7b, 6px 6px 1px #66921b, 9px 9px 1px #f9ab00;
 }
 
 .todo__header {
   padding: 20px;
-  border: 1px solid #00f;
+  width: 75%;
+  line-height: 1;
+}
+
+.deleteX {
+  font-family: "Architects Daughter", cursive;
+  color: rgb(219, 84, 6);
+  padding-right: 20px;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 425px) {
   .todoContainer {
     font-size: smaller;
+  }
+
+  .todo {
+    margin-bottom: 20px;
   }
 }
 

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Sarala&display=swap");
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-family: "Montserrat Subrayada", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+}
+
+div form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+div input {
+  border: transparent;
+  border-bottom: 2px solid #000;
+  width: 50%;
+  background-color: #eee;
+}
+
+div button {
+  font-family: "arial";
+  text-align: center;
+  font-weight: bold;
+  padding: 15px 20px;
+  background-color: rgb(211, 211, 211);
+  color: #000;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Sarala", sans-serif;
+  letter-spacing: 1.2px;
+}
+
+.todosPile {
+  display: flex;
+  justify-content: center;
+  max-width: 90vw;
+  padding-left: 27px;
+}
